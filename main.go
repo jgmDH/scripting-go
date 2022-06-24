@@ -1,12 +1,7 @@
-// #! /usr/bin/env gorun
 package main
 
-import (
-	"fmt"
-	"os"
-)
+import "github.com/bitfield/script"
 
 func main() {
-	fmt.Println("Hello world")
-	os.Exit(0)
+	script.Exec("bash -c 'ssh -T git@github.com'").Stdout()
 }
